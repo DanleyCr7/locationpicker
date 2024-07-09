@@ -20,7 +20,11 @@ class SelectPlaceAction extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(locationName, style: TextStyle(fontSize: 16)),
+                    Text(locationName,
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        )),
                     Text(this.tapToSelectActionText,
                         style: TextStyle(color: Colors.black, fontSize: 15)),
                   ],

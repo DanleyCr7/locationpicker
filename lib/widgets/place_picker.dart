@@ -196,7 +196,10 @@ class PlacePickerState extends State<PlacePicker> {
                     Divider(height: 8),
                     Padding(
                       child: Text(widget.localizationItem!.nearBy,
-                          style: TextStyle(fontSize: 16)),
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          )),
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                     ),
@@ -278,7 +281,10 @@ class PlacePickerState extends State<PlacePicker> {
                 SizedBox(width: 24),
                 Expanded(
                     child: Text(widget.localizationItem!.findingPlace,
-                        style: TextStyle(fontSize: 16)))
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        )))
               ],
             ),
           ),
