@@ -13,7 +13,13 @@ class RichSuggestion extends StatelessWidget {
       child: InkWell(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          child: RichText(text: TextSpan(children: getStyledTexts(context))),
+          child: Text(
+            autoCompleteItem.text ?? '',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 15,
+            ),
+          ),
         ),
         onTap: onTap,
       ),
@@ -22,7 +28,7 @@ class RichSuggestion extends StatelessWidget {
 
   List<TextSpan> getStyledTexts(BuildContext context) {
     final List<TextSpan> result = [];
-    final style = TextStyle(color: Colors.black, fontSize: 15);
+    final style = TextStyle(color: Colors.grey, fontSize: 15);
 
     final startText =
         autoCompleteItem.text?.substring(0, autoCompleteItem.offset);
